@@ -1,0 +1,43 @@
+/*Universal selector*/
+*{
+    background-color: #fcf9a7;
+}
+/*Elements selectors*/
+header{
+    border-bottom:solid 3px black;
+    width:100%;
+}
+/*Class selectors*/
+.contact{
+    display: inline;
+    font-size: 24px;
+    border:2px outset blue;
+    border-radius: 10%;
+    box-shadow:2px 2px 2px 2px black;
+    margin: 17px;
+}
+.box{
+    border:2px dotted black;
+    margin: 10px;
+    border-radius: 8%;
+}
+.box:hover{
+    border: 5px solid rgb(165, 4, 12);
+    border-radius: 8%;
+}
+.margin{
+    margin:60px;
+}
+.text-right{
+    text-align: right;
+    }
+
+ /*id Selectors*/   
+#name{
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    margin-top: 67px;
+}
