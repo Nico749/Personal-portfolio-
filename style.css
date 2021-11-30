@@ -1,19 +1,39 @@
-/*Universal selector*/
+/*Elements selectors*/
 body{
+    
     background-color: #eeeb9f9c;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
 }
-/*Elements selectors*/
+main{
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;  
+}        
+
 header{
     border-bottom:solid 3px black;
     width:100%;
     padding-bottom: 20px;
-    display: flex;
-    flex-wrap:wrap;
+    
+    top: 0;
+    width: 100%;
+   
 }
+
+section {
+    border-left: 6px solid rgb(128, 19, 0);
+    height: auto;
+    margin-left:202px;
+    display:flex ;
+    flex-direction: column;
+}
+
+img{
+    justify-content: left;
+    margin-top:-201px;
+    margin-left:35px;
+}
+
 /*Class selectors*/
 .contact{
     display: inline;
@@ -21,10 +41,11 @@ header{
     border:2px outset blue;
     border-radius: 10%;
     box-shadow:2px 2px 2px 2px black;
-    margin: 25px;
+    margin: 45px;
     background-color: #f7f275;
     padding: 10px 10px;
 }
+
 .contact:hover{
     background-color: rgb(38, 211, 211);
 }
@@ -37,10 +58,13 @@ header{
     max-width: 100%;
     background:linear-gradient(#fc7d74,#ffe189);
     margin-left: 85px;
+    flex:4;
 }
+
 .box1{
     height:350px;
 }
+
 .box:hover {
     border: 7px solid rgb(4, 47, 165) ;
     border-radius: 8%;
@@ -48,13 +72,15 @@ header{
 }
 
 .margin{
-    margin:70px;
+    margin:35px;
 }
+
 .text-right{
     text-align: right;
-    }
-
- /*id Selectors*/   
+    display: flex;
+}
+      
+/*id Selectors*/   
 #name{
     font-size: 45px;
     text-transform: uppercase;
@@ -87,25 +113,20 @@ header{
     text-decoration: none;
 }
 
-
 #history{
     margin-left: 85px;
-    
-}
-
-section {
-    border-left: 6px solid rgb(128, 19, 0);
-    height: auto;
-    margin-left:202px;
-    display:flex;
-    
 }
 
 #intro{
     margin-top: 50px;
 }
-img{
-    justify-content: left;
-    margin-top:-201px;
-    margin-left:35px;
+
+@media screen and (max-width: 800px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    .contact{
+        display: block;
+    }
+    section{
+        width:60%;
+    }
 }
