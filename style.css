@@ -2,12 +2,17 @@
 body{
     background-color: #eeeb9f9c;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 /*Elements selectors*/
 header{
     border-bottom:solid 3px black;
     width:100%;
     padding-bottom: 20px;
+    display: flex;
+    flex-wrap:wrap;
 }
 /*Class selectors*/
 .contact{
@@ -19,17 +24,22 @@ header{
     margin: 25px;
     background-color: #f7f275;
     padding: 10px 10px;
-    
+}
+.contact:hover{
+    background-color: rgb(38, 211, 211);
 }
 
 .box{
-    border:4px dashed black;
+    border:4px solid black;
     margin: 10px;
     border-radius: 8%;
     height: 215px;
-    width: 100%;
+    max-width: 100%;
     background:linear-gradient(#fc7d74,#ffe189);
     margin-left: 85px;
+}
+.box1{
+    height:350px;
 }
 .box:hover {
     border: 7px solid rgb(4, 47, 165) ;
@@ -52,7 +62,8 @@ header{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
     margin-top: 60px;
-    margin-left: 60px;
+    margin-left: 360px;
+    padding:50px;
 }
 
 #work-content{
@@ -63,6 +74,20 @@ header{
     padding:35px 100px;
 }
 
+#work-content1{
+    padding: 98px 100px;
+    font-size: 52px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    text-align:left;
+    
+}
+/*remove the underline effect from links*/
+#work-content a, #work-content1 a, .contact a{
+    text-decoration: none;
+}
+
+
 #history{
     margin-left: 85px;
     
@@ -72,8 +97,15 @@ section {
     border-left: 6px solid rgb(128, 19, 0);
     height: auto;
     margin-left:202px;
+    display:flex;
+    
 }
 
 #intro{
     margin-top: 50px;
+}
+img{
+    justify-content: left;
+    margin-top:-201px;
+    margin-left:35px;
 }

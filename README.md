@@ -2,6 +2,8 @@
 
 The goal of Week2 Homework is to create a Personal Portfolio website that provides infos about personal contacts, short bio, and working projects that can be easily accessed by an employer. The homework is done when it satisfy the following acceptance criteria.
 
+NOTE: Some of the links are currently missing so they have been replaced with fake anchors 
+
 ## User Story
 
 ```
