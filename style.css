@@ -121,7 +121,7 @@ img{
     margin-top: 50px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 960px) {
     /* Use flex-direction to stack the navbar, sidebar, and body */
     .contact{
         display: block;
@@ -129,4 +129,11 @@ img{
     section{
         width:60%;
     }
+    p{
+        width:60%;
+    }
+}
+
+p{
+    font-size: 130%;
 }
