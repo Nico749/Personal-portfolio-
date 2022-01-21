@@ -1,34 +1,37 @@
-# Personal-portfolio-
+# Personal Portfolio
 
-The goal of Week2 Homework is to create a Personal Portfolio website that provides infos about personal contacts, short bio, and working projects that can be easily accessed by an employer. The homework is done when it satisfy the following acceptance criteria.
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Demo](#demo)
+* [Room for Improvement](#room-for-improvement)
+* [Working Application](#working-application)
+* [Contact Me](#contact-me)
 
-NOTE: Some of the links are currently missing so they have been replaced with fake anchors 
+## General info
 
-## User Story
+The goal of the project is to create a personal portfolio that contains a small intro, some recent projects and contact links. Each of the projects is presented with a brief description, a link to the correspondent GitHub repository, a link to the deployed app and a screenshot of the working application
 
-```
-AS AN employer
-I WANT to view a potential employee's deployed portfolio of work samples
-SO THAT I can review samples of their work and assess whether they're a good candidate for an open position
-```
+## Technologies
+
+Project is created with:
+* HTML
+* JavaScript
+* CSS
+
+## Demo
+<a href="" target="_blank">Demo</a>
+
+## Room for Improvement
+
+The application is working fine but it needs some tweaks for styling and displaying on mobile devices
+
+## Working Application
+The following image shows the web application's appearance:
+![Weather API appearance](./demo_screenshot.png)
 
 
-## Acceptance Criteria
 
-Here are the critical requirements necessary to develop a portfolio that satisfies a typical hiring manager’s needs:
 
-```
-GIVEN I need to sample a potential employee's previous work
-WHEN I load their portfolio
-THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
-WHEN I click one of the links in the navigation
-THEN the UI scrolls to the corresponding section
-WHEN I click on the link to the section about their work
-THEN the UI scrolls to a section with titled images of the developer's applications
-WHEN I am presented with the developer's first application
-THEN that application's image should be larger in size than the others
-WHEN I click on the images of the applications
-THEN I am taken to that deployed application
-WHEN I resize the page or view the site on various screens and devices
-THEN I am presented with a responsive layout that adapts to my viewport
-```
+## Contact me 
+Created by [Nico Pasqualini](https://nico749.github.io/Personal-portfolio-/) - feel free to contact me!
