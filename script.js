@@ -21,7 +21,8 @@ const contactsArr=[`<a href=" tel: +61 466505170">`+"Phone"+`</a>`,
   
    title.innerHTML="About Me"
    let intro=document.createElement("p")
-   intro.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
+   intro.classList.add('introp','center')
+   //intro.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
    intro.innerHTML=`My name is Nico Pasqualini and I am a Junior Web Developer.
    I have always been fascinated by coding and programming, and I enjoy using my skills to contribute to the development of websites and applications.
    <br> My background is a bit uncommon because I graduated from University of Bologna in 2018 with a Master's Degree in Finance and 

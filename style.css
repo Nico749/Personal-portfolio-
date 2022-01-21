@@ -1732,3 +1732,16 @@
    width:fit-content;
    margin-bottom: 30px;
  }
+
+ .introp{ 
+  text-align: center;
+  color:#000000;
+} 
+
+
+.center {
+  margin: auto;
+  width: 70%;
+  
+  padding: 10px;
+  }
