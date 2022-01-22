@@ -869,6 +869,9 @@
   
   .text-center {
     text-align: center !important;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight:bold;
   }
   
   .text-justify {
@@ -1723,11 +1726,8 @@
   }
 
  #img1{
-  margin-left: auto;
-  margin-right: auto; 
+  
   justify-content: center;
-   
-   
    height:fit-content;
    width:fit-content;
    margin-bottom: 30px;

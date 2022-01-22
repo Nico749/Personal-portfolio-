@@ -12,11 +12,14 @@ const contactsArr=[`<a href=" tel: +61 466505170">`+"Phone"+`</a>`,
 `<a href="https://github.com/Nico749">`+"GitHub Profile"+`</a>`,
 `<a href="https://www.linkedin.com/in/nico-pasqualini/">`+"LinkedIn Profile"+`</a>`,
 `<a href="./Demo_photos/Resume Pasqualini.pdf">`+"Resume"+`</a>`]
- let title=document.createElement("h1")
  
+const screenshotArr=["./Demo_photos/Event_finder.png","./Demo_photos/Weather_Screenshot.png","./Demo_photos/Day scheduler demo.png"]
+
+let title=document.createElement("h1")
  title.style.textAlign="center"
 
- function appendAboutMe(){
+
+function appendAboutMe(){
    bodyEl.innerHTML=""
   
    title.innerHTML="About Me"
@@ -39,7 +42,7 @@ function appendPreviousProjects(){
    
    title.innerHTML="Projects"
    bodyEl.appendChild(title)
-   for (let i =0;i<projectsObj.length;i++){
+   for (var i =0;i<projectsObj.length;i++){
     var project = document.createElement('p');
     project.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
     var projectTitle=document.createElement('h1')
@@ -48,43 +51,29 @@ function appendPreviousProjects(){
     project.innerHTML+='<strong>Description:</strong> ' +projectsObj[i].summary +'<br/>' 
     project.innerHTML+='<strong>Deployed Version:</strong> ' +projectsObj[i].deployed +'<br/>' 
     project.innerHTML+='<strong>GitHub Repository:</strong> ' + projectsObj[i].github+ '<br/>' 
-    project.innerHTML+='<strong>Screenshot:</strong> ' + projectsObj[i].screenshot
+  
+    project.innerHTML+='<strong>Screenshot:</strong> ' + "<button onclick='myFunction(" + i + ")'> Click to See Screenshot </button>";
     bodyEl.appendChild(projectTitle)
     bodyEl.append(project)
    }
 }
 
-// const screenshotArr=["./Demo_photos/Event_finder.png","./Demo_photos/Weather_Screenshot.png","./Demo_photos/Day scheduler demo.png"]
 
-// function myFunction(num) {
-//     //bodyEl.innerHTML=""
-    
-    
-// //for (var i=0;i<screenshotArr.length;i++)
-// //{   
-//     var x = document.createElement("IMG");
-    
-    
-//     x.setAttribute("src" , screenshotArr[num] )
-//     x.setAttribute("width", "100%");
-//     x.setAttribute("height", "100%");
-//     x.setAttribute("alt", "Screenshot Image");
-    
+function myFunction(num) {
+   bodyEl.innerHTML=""   
+   var x = document.createElement("IMG");
+   x.setAttribute("src" , screenshotArr[num] )
+   x.setAttribute("width", "100%");
+   x.setAttribute("height", "100%");
+   x.setAttribute("alt", "Screenshot Image");
+   bodyEl.appendChild(x)
 
-//     bodyEl.appendChild(x)
-// //}
-
+  let goBack=document.createElement('button')
+  goBack.innerHTML="Go Back"
+  bodyEl.appendChild(goBack)
+  goBack.addEventListener("click",appendPreviousProjects)
   
-
-
-
-// //})
-//   let goBack=document.createElement('button')
-//   goBack.innerHTML="Go Back"
-//   bodyEl.appendChild(goBack)
-//   goBack.addEventListener("click",appendPreviousProjects)
-  
-// }
+}
 
 
 
