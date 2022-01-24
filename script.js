@@ -1,4 +1,5 @@
-const bodyEl=document.querySelector("#result-content")
+//variable declaration and storing info to display
+const bodyEl=document.querySelector("#body-content")
 const aboutmeBtn=document.querySelector("#aboutme")
 const projectBtn=document.querySelector("#projects")
 const contactBtn=document.querySelector("#contact")
@@ -18,14 +19,12 @@ const screenshotArr=["./Demo_photos/Event_finder.png","./Demo_photos/Weather_Scr
 let title=document.createElement("h1")
  title.style.textAlign="center"
 
-
+//functions section
 function appendAboutMe(){
    bodyEl.innerHTML=""
-  
    title.innerHTML="About Me"
    let intro=document.createElement("p")
    intro.classList.add('introp','center')
-   //intro.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
    intro.innerHTML=`My name is Nico Pasqualini and I am a Junior Web Developer.
    I have always been fascinated by coding and programming, and I enjoy using my skills to contribute to the development of websites and applications.
    <br> My background is a bit uncommon because I graduated from University of Bologna in 2018 with a Master's Degree in Finance and 
@@ -35,11 +34,8 @@ function appendAboutMe(){
    bodyEl.appendChild(intro)
 }
 
-
-
 function appendPreviousProjects(){
    bodyEl.innerHTML=""
-   
    title.innerHTML="Projects"
    bodyEl.appendChild(title)
    for (var i =0;i<projectsObj.length;i++){
@@ -51,49 +47,41 @@ function appendPreviousProjects(){
     project.innerHTML+='<strong>Description:</strong> ' +projectsObj[i].summary +'<br/>' 
     project.innerHTML+='<strong>Deployed Version:</strong> ' +projectsObj[i].deployed +'<br/>' 
     project.innerHTML+='<strong>GitHub Repository:</strong> ' + projectsObj[i].github+ '<br/>' 
-  
-    project.innerHTML+='<strong>Screenshot:</strong> ' + "<button onclick='myFunction(" + i + ")'> Click to See Screenshot </button>";
+    project.innerHTML+='<strong>Screenshot:</strong> ' + "<button onclick='displayScreenshot(" + i + ")'> Click to See Screenshot </button>";
     bodyEl.appendChild(projectTitle)
     bodyEl.append(project)
    }
 }
 
-
-function myFunction(num) {
+function displayScreenshot(num) {
    bodyEl.innerHTML=""   
-   var x = document.createElement("IMG");
-   x.setAttribute("src" , screenshotArr[num] )
-   x.setAttribute("width", "100%");
-   x.setAttribute("height", "100%");
-   x.setAttribute("alt", "Screenshot Image");
-   bodyEl.appendChild(x)
+   let newImage = document.createElement("IMG");
+   newImage.setAttribute("src" , screenshotArr[num] )
+   newImage.setAttribute("width", "100%");
+   newImage.setAttribute("height", "100%");
+   newImage.setAttribute("alt", "Screenshot Image");
+   bodyEl.appendChild(newImage)
 
-  let goBack=document.createElement('button')
-  goBack.innerHTML="Go Back"
-  bodyEl.appendChild(goBack)
-  goBack.addEventListener("click",appendPreviousProjects)
+   let goBack=document.createElement('button')
+   goBack.innerHTML="Go Back"
+   bodyEl.appendChild(goBack)
+   goBack.addEventListener("click",appendPreviousProjects)
   
 }
 
-
-
-
-
 function appendContacts(){
     bodyEl.innerHTML=""
-    
     title.innerHTML="Contact Me"
     bodyEl.appendChild(title)
     for (let i =0;i<contactsArr.length;i++){
      var element = document.createElement('h1');
      element.classList.add('h1')
-     //element.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
      element.innerHTML=contactsArr[i]
      bodyEl.appendChild(element)
     }
  }
 
-
+//adding eventlisteners
 aboutmeBtn.addEventListener("click",appendAboutMe)
 projectBtn.addEventListener("click",appendPreviousProjects)
 contactBtn.addEventListener("click",appendContacts)

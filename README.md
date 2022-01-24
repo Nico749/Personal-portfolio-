@@ -28,7 +28,7 @@ The application is working fine but it needs some tweaks for styling and display
 
 ## Working Application
 The following image shows the web application's appearance:
-![Weather API appearance](./demo_screenshot.png)
+![Portfolio Demo](./Demo_photos/Portfolio_Demo.png)
 
 
 
